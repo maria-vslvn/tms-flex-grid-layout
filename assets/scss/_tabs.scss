@@ -1,0 +1,131 @@
+.tabs {
+  padding: 4rem 0 2.5rem;
+
+  &_head {
+    height: 4rem;
+    margin-bottom: -1px;
+    @include flexify($wrap: nowrap);
+
+    @media (min-width: $bp-sm) {
+      max-width: 50%;
+    }
+  }
+
+  &_item {
+    position: relative;
+    flex-grow: 1;
+
+    &-title {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      margin-top: 4rem;
+      margin-bottom: 6rem;
+      text-align: center;
+      font-weight: $fw-b;
+
+      @media (min-width: $bp-sm) {
+        text-align: left;
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        margin-bottom: 7rem;
+        align-self: flex-start;
+      }
+
+      @media (min-width: $bp-md) {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+    }
+
+    &-lbl {
+      cursor: pointer;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      padding: 1rem;
+      border: {
+        top-left-radius: .5rem;
+        top-right-radius: .5rem;
+        left: 1px solid transparent;
+        top: 1px solid transparent;
+        right: 1px solid transparent;
+        bottom: none;
+      }
+      line-height: 1.9rem;
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+      font: {
+        size: 1.4rem;
+        family: $ff-OS;
+        weight: $fw-r;
+      }
+      width: 100%;
+      height: 100%;
+    }
+
+    &-control {
+      opacity: 0;
+      position: absolute;
+
+      &:checked + .tabs_item-lbl {
+        background-color: $white;
+        border: {
+          left-color: $control-color;
+          top-color: $control-color;
+          right-color: $control-color;
+        }
+      }
+    }
+  }
+
+  &_body {
+    padding: 3rem 2.5rem;
+    border: 1px solid $control-color;
+
+    @media (min-width: $bp-sm) {
+      padding: 0;
+    }
+  }
+
+  .tab-pic {
+    padding-top: 50%;
+    background: {
+      repeat: no-repeat;
+      position: center;
+      size: cover;
+    }
+  }
+
+  .card {
+    padding: 0;
+    &_item {
+      &:first-child {
+
+        @media (min-width: $bp-sm) {
+          padding: 5rem 5rem 5rem 10rem;
+          max-width: 60%;
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 4rem;
+
+      @media (min-width: $bp-sm) {
+        align-self: flex-start;
+      }
+    }
+  }
+
+  @media (min-width: $bp-sm) {
+    padding: 6rem 0;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding: 10rem 0 5rem;
+  }
+}

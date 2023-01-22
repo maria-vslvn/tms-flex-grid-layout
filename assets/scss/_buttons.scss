@@ -1,0 +1,50 @@
+.btn {
+  color: $white;
+  text-transform: capitalize;
+  padding: 2rem 1rem;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  font: {
+    weight: $fw-r;
+    size: 1.8rem;
+  }
+
+  @extend .transition;
+
+  @include flexify($justify: center, $align: center);
+
+  @media (min-width: $bp-sm) {
+    max-width: 31.8rem;
+  }
+
+  &-primary {
+    background-color: $accent;
+
+    &:hover {
+      background-color: $accent-dark;
+    }
+
+    &:active {
+      background-color: $accent;
+      box-shadow: inset 0 0 1rem $accent-dark;
+    }
+
+  }
+
+  &-secondary {
+    background-color: transparent;
+    border: 2px solid $white;
+
+    &:hover {
+      color: $accent;
+      border-color: $accent;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $accent;
+      border-color: $accent;
+    }
+  }
+}

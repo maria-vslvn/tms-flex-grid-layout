@@ -1,0 +1,19 @@
+$white: #FFF;
+$accent-light: #F8EFEF;
+$control-color: #BDBDBD;
+$grey-light: #f5f5f5;
+$secondary: #86878B;
+$grey-dark: #333;
+$black: #000;
+$accent: #EC7979;
+$accent-dark: #AB4949;
+
+//Как правило значения брейкпоинтов хранятся в пикселях,
+// даже если в приложении используются не пиксели для обозначение величин
+$bp-xs: 576px;
+$bp-sm: 768px;
+$bp-md: 991px;
+$bp-lg: 1170px;
+
+$grid-gap: 1.5rem;
+$grid-gap-mobile: 2rem;

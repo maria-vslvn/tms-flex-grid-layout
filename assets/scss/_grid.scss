@@ -1,0 +1,54 @@
+.container {
+  width: 100%;
+  max-width: $bp-lg;
+  margin: auto;
+
+  @extend .grid-gaps;
+}
+
+.row {
+  margin: {
+    left: -#{$grid-gap-mobile};
+    right: -#{$grid-gap-mobile};
+  }
+
+  @include flexify(wrap);
+
+  @media (min-width: $bp-sm) {
+    margin: {
+      left: -#{$grid-gap};
+      right: -#{$grid-gap};
+    }
+  }
+}
+
+[class*="col-"] {
+  @extend .grid-gaps;
+}
+
+$counter: 0;
+@for $counter from 0 to 101 {
+  .col-#{$counter}p,
+  .col-xs-#{$counter}p {
+    flex: 1 0 percentage($counter / 100);
+    max-width: percentage($counter / 100);
+  }
+}
+
+@for $counter from 0 to 101 {
+  @media (min-width: $bp-sm) {
+  .col-sm-#{$counter}p {
+    flex: 1 0 percentage($counter / 100);
+    max-width: percentage($counter / 100);
+  }
+}
+}
+
+@for $counter from 0 to 101 {
+  @media (min-width: $bp-md) {
+  .col-md-#{$counter}p {
+    flex: 1 0 percentage($counter / 100);
+    max-width: percentage($counter / 100);
+  }
+}
+}

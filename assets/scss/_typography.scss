@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;500;700&display=swap');
+
+$ff-OS: 'Open Sans', sans-serif;
+$ff-R: 'Raleway', sans-serif;
+$fs: 10px;
+
+$ff-base: $ff-R;
+$fs-base: $fs;
+
+$fw-r: 400;
+$fw-m: 500;
+$fw-sb: 600;
+$fw-b: 700;
+
+.txt {
+  font-size: 1.4rem !important;
+  line-height: 2.1rem !important;
+  color: $black;
+
+  &__uppercase {
+    text-transform: uppercase !important;
+  }
+
+  &__md {
+    font-size: 2.4rem !important;
+    line-height: 3.3rem !important;
+  }
+
+  &__secondary {
+    color: $secondary !important;
+  }
+
+  &__white {
+    color: $white !important;
+  }
+
+  &__accent {
+    color: $accent !important;
+  }
+
+  &__r {
+    font-weight: $fw-r;
+  }
+
+  &__b {
+    font-weight: $fw-b;
+  }
+}

@@ -1,0 +1,16 @@
+@mixin flexify($wrap: nowrap, $dir: row, $justify: unset, $align: unset) {
+  display: flex;
+  flex-wrap: $wrap;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin addBg($url, $size: cover, $pos: center) {
+  background: {
+    image: url($url);
+    size: $size;
+    position: $pos;
+    repeat: no-repeat;
+  };
+}

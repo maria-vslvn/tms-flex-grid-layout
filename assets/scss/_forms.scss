@@ -1,0 +1,47 @@
+.form {
+
+  &_field {
+    padding: 1.6rem 0;
+    color: $control-color;
+    line-height: 1.9rem;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid $control-color;
+    font: {
+      family: $ff-OS;
+      size: 1.4rem;
+      weight: $fw-r;
+    }
+
+    @extend .transition;
+
+    &::placeholder {
+      color: $control-color;
+      text-transform: capitalize;
+      font: {
+        family: $ff-OS;
+        size: 1.4rem;
+      }
+    }
+
+    &:hover {
+      outline: none;
+      border-bottom-color: darken($control-color, 12);
+      color: darken($control-color, 12);
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom-color: darken($control-color, 24);
+      color: darken($control-color, 24);
+    }
+
+    & + .form_field {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .btn {
+    margin-top: 3rem;
+  }
+}

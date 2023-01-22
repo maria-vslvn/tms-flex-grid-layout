@@ -1,0 +1,51 @@
+.card {
+  background-color: $white;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 2rem 2rem 0;
+
+  @include flexify($wrap: nowrap, $dir: column);
+
+  &__horizontal {
+    @include flexify($wrap: wrap, $dir: row);
+
+    @media (min-width: $bp-sm) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &_title {
+    color: $grey-dark;
+    padding: {
+      top: 1.5rem;
+      bottom: 2rem;
+    }
+    line-height: 1.9rem;
+    font: {
+      family: $ff-OS;
+      size: 1.4rem;
+      weight: $fw-b;
+    }
+    text: {
+      transform: uppercase;
+      align: center;
+    }
+  }
+
+  &_footer-btn {
+    margin: 5rem -2rem 0;
+    width: auto;
+    max-width: none;
+  }
+
+  &_item {
+    flex-grow: 1;
+    max-width: 100%;
+
+    @include flexify($dir: column, $align: center, $justify: center);
+
+    @media (min-width: $bp-sm) {
+      max-width: 50%;
+    }
+  }
+}

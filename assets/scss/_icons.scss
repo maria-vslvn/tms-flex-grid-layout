@@ -1,0 +1,71 @@
+.logo {
+  width: 6.2rem;
+  height: 2.3rem;
+
+  @include addBg("../icons/logo.svg", $size: contain);
+}
+
+.icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  flex-grow: 1;
+
+  &_wrap {
+    @include flexify($wrap: nowrap, $justify: space-between);
+  }
+
+  &__accent-border {
+    border-radius: 50%;
+    border: 1px solid $accent;
+  }
+
+  &_sm {
+    width: 5.3rem;
+    height: 5.3rem;
+  }
+
+  &-fb {
+    @include addBg("../icons/icon-fb.svg", $size: contain);
+  }
+
+  &-linkedin {
+    @include addBg("../icons/icon-linkedin.svg", $size: contain);
+  }
+
+  &-twitter {
+    @include addBg("../icons/icon-twitter.svg", $size: contain);
+  }
+
+  &-insta {
+    @include addBg("../icons/icon-insta.svg", $size: contain);
+  }
+
+  &-pinterest {
+    @include addBg("../icons/icon-pinterest.svg", $size: contain);
+  }
+
+  &-github {
+    @include addBg("../icons/icon-github.svg", $size: contain);
+  }
+
+  &-rss {
+    @include addBg("../icons/icon-rss.svg", $size: contain);
+  }
+
+  &-light {
+    @include addBg("../icons/icon-light.svg", $size: 5rem);
+  }
+
+  &-keyboard {
+    @include addBg("../icons/icon-keyboard.svg", $size: 5rem);
+  }
+
+  &-lightning {
+    @include addBg("../icons/icon-lightning.svg", $size: 3.5rem);
+  }
+
+  @media (min-width: $bp-sm) {
+    width: 7rem;
+    height: 7rem;
+  }
+}
